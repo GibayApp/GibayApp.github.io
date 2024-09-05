@@ -13,7 +13,7 @@ Gibay es una app que te permite darle una nueva oportunidad a esos objetos que y
 
 ## **Descárgala ahora desde Google Play**
 
-[![Descargar en Google Play](./art/google_play_store_spanish.png)](https://play.google.com/store/apps/details?id=com.gibay.app)
+[![Descargar en Google Play](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/details?id=com.gibay.app)
 
 ---
 
