@@ -1,0 +1,56 @@
+# Jekyll configuration for GitHub Pages
+# Include .well-known directory while keeping Jekyll processing
+
+# Include directories and files that should be processed
+include: 
+  - ".well-known"
+  - "_posts"
+  - "_pages"
+  - "assets"
+  - "images"
+
+# Exclude files from processing
+exclude:
+  - "Gemfile"
+  - "Gemfile.lock"
+  - "node_modules"
+  - "vendor"
+
+# Keep specific files and directories
+keep_files:
+  - ".well-known"
+  - "CNAME"
+  - ".git"
+  - ".gitignore"
+
+# Jekyll settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /:collection/:title/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Don't process .well-known files as Jekyll content
+data_dir: _data 
