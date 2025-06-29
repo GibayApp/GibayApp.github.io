@@ -1,0 +1,11 @@
+# Redirect all raffle URLs to root
+/raffle/* /
+
+# Redirect all app URLs to root  
+/app/* /
+
+# Redirect all profile URLs to root
+/profile/* /
+
+# Redirect specific raffle URLs
+/raffle/kMIhKZRcDojsFjMo76Fa / 

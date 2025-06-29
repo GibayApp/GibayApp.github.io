@@ -10,6 +10,21 @@ title: Gibay App
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gibay App</title>
+    <script>
+        // Handle redirects for raffle and app URLs
+        (function () {
+            const currentPath = window.location.pathname;
+
+            // Check if the current URL is a raffle or app URL that should redirect
+            if (currentPath.startsWith('/raffle/') || currentPath.startsWith('/app/') || currentPath.startsWith('/profile/')) {
+                // If we're not already on the root page, redirect to root
+                if (currentPath !== '/' && currentPath !== '/index.html') {
+                    window.location.href = '/';
+                    return;
+                }
+            }
+        })();
+    </script>
     <style>
         body {
             font-family: Arial, sans-serif;

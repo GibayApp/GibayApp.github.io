@@ -54,13 +54,4 @@ plugins:
   - jekyll-redirect-from
 
 # Don't process .well-known files as Jekyll content
-data_dir: _data
-
-# Redirect configuration
-redirects:
-  - from: /raffle/*
-    to: /
-  - from: /app/*
-    to: /
-  - from: /profile/*
-    to: / 
+data_dir: _data 
