@@ -3,7 +3,9 @@
   "target": {
     "namespace": "android_app",
     "package_name": "com.gibay.app",
-    "sha256_cert_fingerprints":
-    ["18:68:62:CD:3E:8A:96:5C:EF:ED:B8:A6:F8:96:26:1F:34:33:6B:E5:86:D4:26:53:D0:A0:B5:51:E8:1B:A0:A8"]
+    "sha256_cert_fingerprints": [
+      "D8:BE:F6:8E:24:D5:F5:61:82:E6:FE:E5:64:F2:26:44:AE:75:3D:A5:F3:FF:7B:E6:D5:E9:55:69:F1:3C:18:ED",
+      "18:68:62:CD:3E:8A:96:5C:EF:ED:B8:A6:F8:96:26:1F:34:33:6B:E5:86:D4:26:53:D0:A0:B5:51:E8:1B:A0:A8"
+    ]
   }
-}]
+}] 
