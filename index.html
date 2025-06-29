@@ -29,6 +29,27 @@ title: Gibay App
             padding: 20px;
             border-radius: 8px;
         }
+
+        .button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .test-links {
+            margin-top: 30px;
+            padding: 20px;
+            background: #e9ecef;
+            border-radius: 8px;
+        }
     </style>
 </head>
 
@@ -48,6 +69,18 @@ title: Gibay App
             <li><a href="/.well-known/assetlinks.json">Asset Links JSON</a></li>
             <li><a href="/assetlinks.json">Alternative Asset Links JSON</a></li>
         </ul>
+    </div>
+
+    <div class="test-links">
+        <h2>Test App Links</h2>
+        <p>Click these links to test if they open your Gibay app:</p>
+
+        <a href="https://gibayapp.github.io/app" class="button">Open App</a>
+        <a href="https://gibayapp.github.io/raffle" class="button">Open Raffle</a>
+        <a href="https://gibayapp.github.io/profile" class="button">Open Profile</a>
+
+        <p><small>These links should open the Gibay app if it's installed on your device and the app links are properly
+                configured.</small></p>
     </div>
 </body>
 

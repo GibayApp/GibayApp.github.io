@@ -1,0 +1,137 @@
+---
+layout: default
+title: Gibay App - Redirecting...
+---
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gibay App - Redirecting...</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            text-align: center;
+            line-height: 1.6;
+        }
+
+        .content {
+            background: #f5f5f5;
+            padding: 30px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+
+        .button {
+            display: inline-block;
+            background: #007bff;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px 5px;
+        }
+
+        .button:hover {
+            background: #0056b3;
+        }
+
+        .loading {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <script>
+        // Check if this is a mobile device
+        function isMobile() {
+            return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+        }
+
+        // Get the current path
+        function getCurrentPath() {
+            return window.location.pathname;
+        }
+
+        // Check if the path should open the app
+        function shouldOpenApp(path) {
+            return path.startsWith('/app') ||
+                path.startsWith('/raffle') ||
+                path.startsWith('/profile') ||
+                path.startsWith('/chat') ||
+                path.startsWith('/user');
+        }
+
+        // Try to open the app
+        function tryOpenApp() {
+            const path = getCurrentPath();
+            if (shouldOpenApp(path)) {
+                // Try to open the app by navigating to the URL
+                // This will trigger the app link if the app is installed
+                window.location.href = window.location.href;
+
+                // Set a timeout to redirect to main page if app doesn't open
+                setTimeout(function () {
+                    window.location.href = '/';
+                }, 2000);
+            } else {
+                // Redirect to main page immediately
+                window.location.href = '/';
+            }
+        }
+
+        // Auto-redirect after page load
+        window.onload = function () {
+            setTimeout(tryOpenApp, 1000);
+        };
+    </script>
+</head>
+
+<body>
+    <div class="content">
+        <h1>Gibay App</h1>
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Redirecting...</p>
+        </div>
+
+        <p>If the Gibay app doesn't open automatically, you can:</p>
+
+        <a href="/" class="button">Go to Main Page</a>
+        <a href="javascript:tryOpenApp()" class="button">Try Opening App Again</a>
+
+        <p><small>Current path: <code id="currentPath"></code></small></p>
+    </div>
+
+    <script>
+        // Display current path
+        document.getElementById('currentPath').textContent = getCurrentPath();
+    </script>
+</body>
+
+</html>
