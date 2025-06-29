@@ -1,6 +1,13 @@
 # Jekyll configuration for GitHub Pages
 # Include .well-known directory while keeping Jekyll processing
 
+# Site settings
+title: Gibay App
+description: "Da una Segunda Vida a tus Objetos"
+
+# Theme
+theme: jekyll-theme-cayman
+
 # Include directories and files that should be processed
 include: 
   - ".well-known"

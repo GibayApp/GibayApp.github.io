@@ -10,21 +10,6 @@ title: Gibay App
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gibay App</title>
-    <script>
-        // Handle redirects for raffle and app URLs
-        (function () {
-            const currentPath = window.location.pathname;
-
-            // Check if the current URL is a raffle or app URL that should redirect
-            if (currentPath.startsWith('/raffle/') || currentPath.startsWith('/app/') || currentPath.startsWith('/profile/')) {
-                // If we're not already on the root page, redirect to root
-                if (currentPath !== '/' && currentPath !== '/index.html') {
-                    window.location.href = '/';
-                    return;
-                }
-            }
-        })();
-    </script>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,18 +69,6 @@ title: Gibay App
             <li><a href="/.well-known/assetlinks.json">Asset Links JSON</a></li>
             <li><a href="/assetlinks.json">Alternative Asset Links JSON</a></li>
         </ul>
-    </div>
-
-    <div class="test-links">
-        <h2>Test App Links</h2>
-        <p>Click these links to test if they open your Gibay app:</p>
-
-        <a href="https://gibayapp.github.io/app" class="button">Open App</a>
-        <a href="https://gibayapp.github.io/raffle" class="button">Open Raffle</a>
-        <a href="https://gibayapp.github.io/profile" class="button">Open Profile</a>
-
-        <p><small>These links should open the Gibay app if it's installed on your device and the app links are properly
-                configured.</small></p>
     </div>
 </body>
 
