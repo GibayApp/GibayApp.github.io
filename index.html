@@ -1,33 +1,26 @@
----
-layout: default
-title: Gibay App
----
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibay App</title>
+    <title>Gibay App - Redirecting to App Store</title>
+    <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.gibay.app">
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
             padding: 20px;
-            line-height: 1.6;
-        }
-
-        .header {
             text-align: center;
-            margin-bottom: 40px;
+            line-height: 1.6;
         }
 
         .content {
             background: #f5f5f5;
-            padding: 20px;
+            padding: 30px;
             border-radius: 8px;
+            margin: 20px 0;
         }
 
         .button {
@@ -44,31 +37,47 @@ title: Gibay App
             background: #0056b3;
         }
 
-        .test-links {
-            margin-top: 30px;
-            padding: 20px;
-            background: #e9ecef;
-            border-radius: 8px;
+        .loading {
+            margin: 20px 0;
+            font-size: 18px;
+            color: #666;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #007bff;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <h1>Gibay App</h1>
-        <p>Welcome to the Gibay App landing page</p>
-    </div>
-
     <div class="content">
-        <h2>App Links Configuration</h2>
-        <p>This site hosts the app links configuration for the Gibay Android app.</p>
-        <p>The assetlinks.json file is located at: <code>/.well-known/assetlinks.json</code></p>
+        <h1>Gibay App</h1>
+        <div class="loading">
+            <div class="spinner"></div>
+            <p>Redirecting to Google Play Store...</p>
+        </div>
 
-        <h3>Available Endpoints:</h3>
-        <ul>
-            <li><a href="/.well-known/assetlinks.json">Asset Links JSON</a></li>
-            <li><a href="/assetlinks.json">Alternative Asset Links JSON</a></li>
-        </ul>
+        <p>You're being redirected to download the Gibay app from Google Play Store.</p>
+
+        <a href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Download Gibay App</a>
+
+        <p><small>If you're not redirected automatically, click the button above.</small></p>
     </div>
 </body>
 
