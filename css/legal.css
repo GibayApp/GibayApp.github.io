@@ -207,6 +207,22 @@ a:hover {
     background: #f7f5fc;
 }
 
+.legal-cta {
+    display: inline-block;
+    margin: 0.5rem 0 1rem;
+    padding: 0.75rem 1.25rem;
+    background: #5835BA;
+    color: #fff !important;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.legal-cta:hover {
+    background: #7E57C2;
+    color: #fff !important;
+}
+
 @media print {
     .site-header__nav,
     .skip-link {
