@@ -15,6 +15,7 @@ include:
   - "_pages"
   - "assets"
   - "images"
+  - "css"
 
 # Exclude files from processing
 exclude:

@@ -24,4 +24,21 @@ Gibay es una app que te permite darle una nueva oportunidad a esos objetos que y
 
 ---
 
+## Sitio web
+
+- Raíz: [https://gibayapp.github.io/](https://gibayapp.github.io/) — redirección a Google Play (deeplinks).
+- Página de inicio: [https://gibayapp.github.io/home.html](https://gibayapp.github.io/home.html) — información de la app, enlaces legales y descarga.
+
+## Enlaces legales (Google Play y app)
+
+| Documento | URL |
+|-----------|-----|
+| Política de privacidad | https://gibayapp.github.io/politica-de-privacidad.html |
+| Términos y condiciones | https://gibayapp.github.io/terminos-y-condiciones.html |
+| Contacto | appgibay@gmail.com |
+
+Instrucciones para Play Console: ver [PLAY_STORE.md](PLAY_STORE.md).
+
+---
+
 ## ¡Únete al movimiento por un consumo más consciente!
