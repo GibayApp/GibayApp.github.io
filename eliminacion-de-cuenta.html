@@ -43,7 +43,7 @@
         </section>
 
         <h2 id="como-solicitar">Cómo solicitar la eliminación de su cuenta</h2>
-        <p>Puede iniciar la solicitud de las siguientes formas (no es necesario usar ambas):</p>
+        <p>Puede <strong>iniciar</strong> la solicitud de las siguientes formas (no es necesario usar ambas). La baja efectiva de datos se tramita desde nuestros sistemas tras verificar su identidad; no todas las operaciones de supresión las ejecuta usted directamente en el dispositivo.</p>
 
         <h3>Opción 1 — Desde la aplicación (recomendado)</h3>
         <ol>
@@ -65,24 +65,112 @@
             </a>
         </p>
 
-        <h2 id="que-se-elimina">Qué datos se eliminan</h2>
-        <p>Tras procesar una solicitud válida, eliminaremos o anonimizaremos, en la medida de lo posible, los datos personales vinculados a su cuenta, incluidos de forma orientativa:</p>
+        <h2 id="tramitacion">Cómo tramitamos su solicitud</h2>
+        <p>El procedimiento de baja se ejecuta desde sistemas controlados por el operador (desarrollador <strong>Mario Velasco Casquero</strong>), queda registrado de forma trazable y se atiende en plazos razonables conforme al RGPD (artículo 17, derecho de supresión), sin perjuicio de las excepciones legales aplicables.</p>
+        <p>Si se produce un fallo técnico durante el proceso, el incidente queda registrado para su corrección manual; no se realizan reintentos automáticos indefinidos que pudieran duplicar efectos.</p>
+
+        <h2 id="que-ocurre">Qué ocurre con sus datos al dar de baja la cuenta</h2>
+        <p>Gibay conecta a usuarios que publican <strong>sorteos</strong> y a usuarios que <strong>participan</strong> en sorteos de terceros. Al atender su solicitud de supresión, aplicamos el siguiente enfoque: dejamos de usar sus datos identificativos en la medida prevista, preservamos la continuidad del servicio para el resto de usuarios cuando sea necesario (por ejemplo, anonimizando su nombre e imagen en sorteos ya publicados) y eliminamos por completo otros elementos, como las conversaciones en las que participaba.</p>
+
+        <nav class="legal-toc" aria-label="Índice del tratamiento en la baja">
+            <h2>Resumen por tipo de dato</h2>
+            <ol>
+                <li><a href="#sorteos-publicados">Sorteos que usted ha publicado</a></li>
+                <li><a href="#participaciones">Participaciones en sorteos de otros</a></li>
+                <li><a href="#conversaciones">Conversaciones (chats)</a></li>
+                <li><a href="#informes">Informes y reclamaciones</a></li>
+                <li><a href="#referencias">Referencias entre usuarios</a></li>
+                <li><a href="#perfil-cuenta">Perfil, notificaciones y cuenta de acceso</a></li>
+                <li><a href="#conservacion-residual">Datos que pueden conservarse o anonimizarse</a></li>
+            </ol>
+        </nav>
+
+        <h3 id="sorteos-publicados">Sorteos que usted ha publicado</h3>
+        <p>Los sorteos de los que usted es <strong>titular</strong> se tratan según la fase en la que se encuentren:</p>
         <ul>
-            <li>Datos de registro e inicio de sesión (correo electrónico, identificadores de Firebase).</li>
-            <li>Perfil (nombre o alias, foto de perfil, preferencias).</li>
-            <li>Publicaciones, mensajes y valoraciones asociados a su cuenta.</li>
-            <li>Datos de uso y analítica vinculados a su identificador de usuario en Firebase, Mixpanel y herramientas similares declaradas en la <a href="politica-de-privacidad.html">Política de privacidad</a>.</li>
+            <li><strong>Sorteo activo</strong> (plazo de participación abierto o con ganador pendiente de gestión según las reglas del servicio): el sorteo se <strong>cancela</strong> y se aplica el procedimiento estándar de cancelación (comunicaciones a participantes y, cuando corresponda, devoluciones o reequilibrios de unidades de valor internas del servicio).</li>
+            <li><strong>Sorteo finalizado o ya cancelado con anterioridad</strong>: no se reabre el ciclo comercial; no obstante, se <strong>anonimizan</strong> sus datos de titular en la ficha del sorteo (nombre de perfil, imagen, ubicación u otros campos equivalentes), de modo que el contenido del sorteo pueda seguir consultándose sin revelar su identidad.</li>
         </ul>
-        <p>Podemos conservar determinados datos durante el plazo estrictamente necesario cuando exista una obligación legal, un interés legítimo de seguridad o prevención del fraude, o mientras dure una reclamación pendiente. En ese caso se le informará cuando corresponda.</p>
+        <p>En <strong>todas</strong> las fases se anonimiza su perfil como titular en la ficha del sorteo.</p>
+
+        <h3 id="participaciones">Participaciones en sorteos de otros usuarios</h3>
+        <p>En Gibay no puede participar en sus propios sorteos. Respecto de sus participaciones en sorteos publicados por terceros:</p>
+        <ul>
+            <li>Si usted es <strong>ganador</strong> en un sorteo aún no cerrado según las reglas del servicio, el sistema <strong>designa un nuevo ganador</strong> antes de eliminar su participación.</li>
+            <li>A continuación se <strong>elimina</strong> el registro de su participación.</li>
+            <li>Si el sorteo sigue <strong>activo</strong>, se reduce el recuento público de participaciones de forma acorde, sin que el recuento resulte negativo.</li>
+        </ul>
+
+        <h3 id="conversaciones">Conversaciones (chats ligados a sorteos)</h3>
+        <p>Los hilos de conversación en los que participaba se <strong>eliminan por completo</strong>, incluidos los datos asociados al chat. El otro usuario <strong>perderá ese historial</strong> en la plataforma. Se limpian, en la medida posible, las referencias de mensajes no leídos ligadas a ese chat en el perfil del otro participante.</p>
+
+        <h3 id="informes">Informes y reclamaciones internas</h3>
+        <p>Si ha generado informes o reclamaciones dentro del servicio (por ejemplo, sobre un sorteo o una conversación):</p>
+        <ul>
+            <li>Su identificador de usuario se sustituye por un <strong>marcador estándar</strong> que indica «cuenta eliminada», de modo que el sistema no lo trate como usuario activo.</li>
+            <li>El informe pasa a estado <strong>cerrado o cancelado</strong>, sin flujos automáticos pendientes sobre ese expediente.</li>
+            <li>Puede <strong>conservarse el texto descriptivo</strong> del informe; tenga en cuenta que un texto libre puede contener datos personales suyos o de terceros.</li>
+        </ul>
+
+        <h3 id="referencias">Referencias entre usuarios</h3>
+        <p>Se eliminan o neutralizan las referencias que vinculen a otros perfiles con su cuenta cuando dejen de ser necesarias tras la supresión (por ejemplo, vínculos de invitación entre cuentas).</p>
+
+        <h3 id="perfil-cuenta">Perfil, notificaciones y cuenta de acceso</h3>
+        <ul>
+            <li>Se suprime el <strong>historial de notificaciones</strong> de su perfil antes de eliminar el perfil definitivamente.</li>
+            <li>Se <strong>elimina por completo su perfil de usuario</strong> una vez completadas las operaciones que aún requieran leer datos de perfil (cancelaciones, reembolsos o comunicaciones legítimas del procedimiento).</li>
+            <li>Se <strong>elimina su cuenta de acceso</strong> (correo, autenticación con Google u otros métodos declarados en la <a href="politica-de-privacidad.html">Política de privacidad</a>): ya no podrá iniciar sesión.</li>
+            <li>Se <strong>suprimen los ficheros</strong> que constituyan exclusivamente su imagen de perfil u otros contenidos personales suyos alojados en el servicio.</li>
+            <li>Los índices de <strong>búsqueda</strong> del servicio se actualizan para no mostrar información identificativa obsoleta (estado del sorteo, datos anonimizados del titular, recuentos actualizados).</li>
+            <li>Los datos de uso y analítica vinculados a su identificador en Firebase, Mixpanel y herramientas similares se tratan conforme a la política de cada proveedor y a nuestra declaración en Google Play.</li>
+        </ul>
+
+        <h3 id="conservacion-residual">Datos que pueden conservarse o anonimizarse</h3>
+        <p>En determinados registros históricos pueden conservarse <strong>identificadores técnicos</strong> sin nombre de perfil, imagen ni otros datos habituales de identificación en la interfaz (por ejemplo, para mantener la coherencia entre sorteos o participaciones ya tratadas). En expedientes de informes se utiliza el marcador de cuenta eliminada en lugar de su usuario activo.</p>
+        <p>Podemos conservar determinados datos durante el plazo estrictamente necesario por <strong>obligación legal</strong>, seguridad, prevención del fraude o reclamaciones pendientes, conforme al artículo 17.3 del RGPD. Las copias en sistemas de copia de seguridad pueden persistir hasta el ciclo de rotación habitual antes del borrado definitivo.</p>
+
+        <h2 id="resumen-tabla">Resumen</h2>
+        <table class="legal-table">
+            <thead>
+                <tr>
+                    <th scope="col">Elemento</th>
+                    <th scope="col">Qué hacemos</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Sorteos que usted publicó</td>
+                    <td>Cancelación si el sorteo está activo; anonimización del titular en cualquier fase.</td>
+                </tr>
+                <tr>
+                    <td>Participaciones en sorteos ajenos</td>
+                    <td>Nuevo ganador si procede; eliminación de su participación; ajuste de recuentos en sorteos activos.</td>
+                </tr>
+                <tr>
+                    <td>Conversaciones</td>
+                    <td>Eliminación completa del chat; limpieza de no leídos en el otro participante cuando sea posible.</td>
+                </tr>
+                <tr>
+                    <td>Informes y reclamaciones</td>
+                    <td>Marcador «cuenta eliminada»; cierre del expediente; posible conservación del texto descriptivo.</td>
+                </tr>
+                <tr>
+                    <td>Perfil y cuenta</td>
+                    <td>Supresión de notificaciones y perfil; eliminación de cuenta y ficheros personales; actualización de búsqueda.</td>
+                </tr>
+            </tbody>
+        </table>
 
         <h2 id="plazo">Plazo de tramitación</h2>
-        <p>Confirmaremos la recepción de su solicitud y completaremos la eliminación en un plazo máximo de <strong>noventa (90) días</strong> desde su solicitud, salvo que la ley exija o permita un plazo distinto. Las copias en sistemas de copia de seguridad pueden persistir hasta el ciclo de rotación habitual antes del borrado definitivo.</p>
+        <p>Confirmaremos la recepción de su solicitud y completaremos el procedimiento en un plazo máximo de <strong>noventa (90) días</strong> desde su solicitud, salvo que la ley exija o permita un plazo distinto.</p>
 
         <h2 id="antes-de-eliminar">Antes de eliminar su cuenta</h2>
         <ul>
-            <li>La eliminación es <strong>permanente</strong>: no podrá recuperar su cuenta ni el historial asociado.</li>
-            <li>Si tiene operaciones o acuerdos pendientes con otros usuarios (entregas, mensajes abiertos), resuélvalos antes de solicitar la baja.</li>
-            <li>Si utiliza inicio de sesión con Google, la eliminación de su cuenta en Gibay no elimina su cuenta de Google; solo afecta a los datos tratados en el marco de esta App.</li>
+            <li>La baja es <strong>permanente</strong>: no podrá recuperar su cuenta, sus chats ni gran parte del historial asociado.</li>
+            <li>Si publicó <strong>sorteos activos</strong>, se cancelarán y se aplicará la política de cancelación (incluidas comunicaciones y devoluciones cuando corresponda).</li>
+            <li>Si era <strong>ganador</strong> en un sorteo ajeno aún abierto, se designará otro ganador antes de eliminar su participación.</li>
+            <li>Las <strong>conversaciones</strong> en las que participaba se borrarán también para el otro usuario.</li>
+            <li>Si utiliza inicio de sesión con Google, la eliminación en Gibay no elimina su cuenta de Google; solo afecta a los datos tratados en el marco de esta App.</li>
         </ul>
 
         <h2 id="mas-informacion">Más información</h2>
