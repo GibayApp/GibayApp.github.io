@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gibay - Da una Segunda Vida a tus objetos</title>
-    <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.gibay.app">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,10 +36,23 @@
             background: #7E57C2;
         }
 
+        .button-appstore {
+            background: #111111;
+        }
+
+        .button-appstore:hover {
+            background: #333333;
+        }
+
         .loading {
+            display: none;
             margin: 20px 0;
             font-size: 18px;
             color: #666;
+        }
+
+        .loading.is-visible {
+            display: block;
         }
 
         .spinner {
@@ -53,7 +65,18 @@
             margin: 20px auto;
         }
 
-        /* Set color to h1 */
+        .store-buttons {
+            margin: 16px 0;
+        }
+
+        .fallback-note {
+            display: none;
+        }
+
+        .fallback-note.is-visible {
+            display: block;
+        }
+
         h1 {
             color: #5835BA;
         }
@@ -73,22 +96,64 @@
 <body>
     <div class="content">
         <img src="https://gibayapp.github.io/images/logo.png" alt="Gibay Logo" style="max-width: 250px; margin-bottom: 20px;">
-        <div class="loading">
+        <div id="loading" class="loading" aria-live="polite">
             <div class="spinner"></div>
-            <p>Redirigiendo a Google Play Store...</p>
+            <p id="loading-text">Redirigiendo a la tienda...</p>
         </div>
 
-        <p>Estás siendo redirigido para descargar Gibay desde Google Play Store.</p>
+        <p id="intro-text">Elige tu plataforma para descargar Gibay.</p>
 
-        <a href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Descarga Gibay</a>
+        <div class="store-buttons">
+            <a id="play-store-link" href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Google Play</a>
+            <a id="app-store-link" href="https://apps.apple.com/app/id0000000000" class="button button-appstore">App Store</a>
+        </div>
 
-        <p><small>Si no eres redirigido automáticamente, haz clic en el botón de arriba.</small></p>
+        <p id="fallback-note" class="fallback-note"><small>Si no eres redirigido automáticamente, elige una tienda.</small></p>
         <hr>
         <h1>Gibay</h1>
         <p>Gibay es una app que te permite darle una nueva oportunidad a esos objetos que ya no necesitas, reduciendo el
             desperdicio y promoviendo la reutilización. Dona tus artículos y únete a la
             eco-sostenibilidad.</p>
     </div>
+
+    <script>
+        (function () {
+            var APP_STORE_URL = 'https://apps.apple.com/app/id6786309439';
+            var PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=com.gibay.app';
+
+            var ua = navigator.userAgent || '';
+            var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+            var isAndroid = /Android/i.test(ua);
+
+            var loading = document.getElementById('loading');
+            var loadingText = document.getElementById('loading-text');
+            var introText = document.getElementById('intro-text');
+            var fallbackNote = document.getElementById('fallback-note');
+            var playStoreLink = document.getElementById('play-store-link');
+            var appStoreLink = document.getElementById('app-store-link');
+
+            playStoreLink.href = PLAY_STORE_URL;
+            appStoreLink.href = APP_STORE_URL;
+
+            if (isIOS) {
+                loading.classList.add('is-visible');
+                fallbackNote.classList.add('is-visible');
+                loadingText.textContent = 'Redirigiendo a App Store...';
+                introText.textContent = 'Estás siendo redirigido para descargar Gibay desde App Store.';
+                window.location.replace(APP_STORE_URL);
+                return;
+            }
+
+            if (isAndroid) {
+                loading.classList.add('is-visible');
+                fallbackNote.classList.add('is-visible');
+                loadingText.textContent = 'Redirigiendo a Google Play Store...';
+                introText.textContent = 'Estás siendo redirigido para descargar Gibay desde Google Play Store.';
+                window.location.replace(PLAY_STORE_URL);
+            }
+        })();
+    </script>
 </body>
 
 </html>
