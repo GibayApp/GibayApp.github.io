@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gibay - Da una Segunda Vida a tus objetos</title>
-    <meta http-equiv="refresh" content="0; url=https://play.google.com/store/apps/details?id=com.gibay.app">
+    <title>Página no encontrada | Gibay</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,35 +36,26 @@
             background: #7E57C2;
         }
 
-        .loading {
-            margin: 20px 0;
-            font-size: 18px;
-            color: #666;
+        .button-appstore {
+            background: #111111;
         }
 
-        .spinner {
-            border: 4px solid #f3f3f3;
-            border-top: 4px solid #5835BA;
-            border-radius: 50%;
-            width: 40px;
-            height: 40px;
-            animation: spin 1s linear infinite;
-            margin: 20px auto;
+        .button-appstore:hover {
+            background: #333333;
         }
 
-        /* Set color to h1 */
+        .button-outline {
+            background: transparent;
+            color: #5835BA;
+            border: 2px solid #5835BA;
+        }
+
+        .button-outline:hover {
+            background: #f7f5fc;
+        }
+
         h1 {
             color: #5835BA;
-        }
-
-        @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
         }
     </style>
 </head>
@@ -73,21 +63,15 @@
 <body>
     <div class="content">
         <img src="https://gibayapp.github.io/images/logo.png" alt="Gibay Logo" style="max-width: 250px; margin-bottom: 20px;">
-        <div class="loading">
-            <div class="spinner"></div>
-            <p>Redirigiendo a Google Play Store...</p>
+        <h1>Página no encontrada</h1>
+        <p>La página que buscas no existe o ha sido movida.</p>
+        <p>Descarga Gibay en iOS o Android, o vuelve al inicio del sitio.</p>
+
+        <div class="store-buttons">
+            <a href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Google Play</a>
+            <a href="https://apps.apple.com/app/id6786309439" class="button button-appstore">App Store</a>
+            <a href="home.html" class="button button-outline">Ir al inicio</a>
         </div>
-
-        <p>Estás siendo redirigido para descargar Gibay desde Google Play Store.</p>
-
-        <a href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Descarga Gibay</a>
-
-        <p><small>Si no eres redirigido automáticamente, haz clic en el botón de arriba.</small></p>
-        <hr>
-        <h1>Gibay</h1>
-        <p>Gibay es una app que te permite darle una nueva oportunidad a esos objetos que ya no necesitas, reduciendo el
-            desperdicio y promoviendo la reutilización. Dona tus artículos y únete a la
-            eco-sostenibilidad.</p>
     </div>
 </body>
 

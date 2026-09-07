@@ -11,9 +11,10 @@ Gibay es una app que te permite darle una nueva oportunidad a esos objetos que y
 
 ---
 
-## **Descárgala ahora desde Google Play**
+## **Descárgala ahora en iOS y Android**
 
 [![Descargar en Google Play](https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg)](https://play.google.com/store/apps/details?id=com.gibay.app)
+[![Descargar en App Store](https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg)](https://apps.apple.com/app/id6786309439)
 
 ---
 
@@ -26,10 +27,10 @@ Gibay es una app que te permite darle una nueva oportunidad a esos objetos que y
 
 ## Sitio web
 
-- Raíz: [https://gibayapp.github.io/](https://gibayapp.github.io/) — redirección a Google Play (deeplinks).
+- Raíz: [https://gibayapp.github.io/](https://gibayapp.github.io/) — redirección a Google Play o App Store según el dispositivo (deeplinks).
 - Página de inicio: [https://gibayapp.github.io/home.html](https://gibayapp.github.io/home.html) — información de la app, enlaces legales y descarga.
 
-## Enlaces legales (Google Play y app)
+## Enlaces legales (Google Play, App Store y app)
 
 | Documento | URL |
 |-----------|-----|
