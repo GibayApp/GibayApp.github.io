@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-ES">
 
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,13 @@
     <title>Página no encontrada | Gibay</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             max-width: 600px;
             margin: 0 auto;
             padding: 20px;
             text-align: center;
             line-height: 1.6;
+            color: #1a1a1a;
         }
 
         .content {
@@ -22,55 +23,98 @@
             margin: 20px 0;
         }
 
-        .button {
-            display: inline-block;
-            background: #5835BA;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 5px;
-            margin: 10px 5px;
-        }
-
-        .button:hover {
-            background: #7E57C2;
-        }
-
-        .button-appstore {
-            background: #111111;
-        }
-
-        .button-appstore:hover {
-            background: #333333;
-        }
-
-        .button-outline {
-            background: transparent;
-            color: #5835BA;
-            border: 2px solid #5835BA;
-        }
-
-        .button-outline:hover {
-            background: #f7f5fc;
+        .content img {
+            max-width: 250px;
+            margin-bottom: 20px;
         }
 
         h1 {
             color: #5835BA;
         }
+
+        .actions {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.75rem;
+            margin-top: 1.25rem;
+        }
+
+        .store-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background: #5835BA;
+            color: #fff;
+            padding: 0.65rem 1.25rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            border: 2px solid #5835BA;
+        }
+
+        .button:hover {
+            background: #7E57C2;
+            border-color: #7E57C2;
+            color: #fff;
+        }
+
+        .button-outline {
+            background: transparent;
+            color: #5835BA;
+        }
+
+        .button-outline:hover {
+            background: #f7f5fc;
+            color: #5835BA;
+        }
+
+        .store-icon {
+            width: 1.125rem;
+            height: 1.125rem;
+            flex-shrink: 0;
+            fill: currentColor;
+        }
     </style>
 </head>
 
 <body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+        <symbol id="icon-google-play" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92Zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635Zm3.199-2.199 2.773 1.604a1 1 0 0 1 0 1.776l-2.773 1.604L15.206 12l2.492-1.492ZM5.864 2.658 16.802 8.99l-2.302 2.302-8.636-8.634Z"/>
+        </symbol>
+        <symbol id="icon-app-store" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.847-.78.911-1.443 2.208-1.264 3.486 1.338.104 2.71-.688 3.551-1.503z"/>
+        </symbol>
+    </svg>
+
     <div class="content">
-        <img src="https://gibayapp.github.io/images/logo.png" alt="Gibay Logo" style="max-width: 250px; margin-bottom: 20px;">
+        <img src="https://gibayapp.github.io/images/logo.png" alt="Gibay Logo">
         <h1>Página no encontrada</h1>
         <p>La página que buscas no existe o ha sido movida.</p>
         <p>Descarga Gibay en iOS o Android, o vuelve al inicio del sitio.</p>
 
-        <div class="store-buttons">
-            <a href="https://play.google.com/store/apps/details?id=com.gibay.app" class="button">Google Play</a>
-            <a href="https://apps.apple.com/es/app/id6786309439" class="button button-appstore">App Store</a>
-            <a href="home.html" class="button button-outline">Ir al inicio</a>
+        <div class="actions">
+            <div class="store-buttons">
+                <a class="button" href="https://play.google.com/store/apps/details?id=com.gibay.app" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-google-play"></use></svg>
+                    Google Play
+                </a>
+                <a class="button" href="https://apps.apple.com/es/app/id6786309439" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-app-store"></use></svg>
+                    App Store
+                </a>
+            </div>
+            <a class="button button-outline" href="home.html">Ir al inicio</a>
         </div>
     </div>
 </body>

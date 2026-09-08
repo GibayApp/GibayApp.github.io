@@ -12,6 +12,15 @@
 <body>
     <a class="skip-link" href="#contenido-principal">Saltar al contenido</a>
 
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+        <symbol id="icon-google-play" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92Zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635Zm3.199-2.199 2.773 1.604a1 1 0 0 1 0 1.776l-2.773 1.604L15.206 12l2.492-1.492ZM5.864 2.658 16.802 8.99l-2.302 2.302-8.636-8.634Z"/>
+        </symbol>
+        <symbol id="icon-app-store" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.847-.78.911-1.443 2.208-1.264 3.486 1.338.104 2.71-.688 3.551-1.503z"/>
+        </symbol>
+    </svg>
+
     <header class="site-header">
         <div class="site-header__inner">
             <a class="site-header__logo" href="home.html" aria-label="Gibay — inicio">
@@ -21,8 +30,16 @@
                 <a href="home.html">Inicio</a>
                 <a href="terminos-y-condiciones.html">Términos y condiciones</a>
                 <a href="politica-de-privacidad.html" aria-current="page">Política de privacidad</a>
-                <a href="https://play.google.com/store/apps/details?id=com.gibay.app">Google Play</a>
-                <a href="https://apps.apple.com/es/app/id6786309439">App Store</a>
+                <span class="site-header__stores">
+                    <a class="store-btn" href="https://play.google.com/store/apps/details?id=com.gibay.app" rel="noopener noreferrer">
+                        <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-google-play"></use></svg>
+                        Google Play
+                    </a>
+                    <a class="store-btn" href="https://apps.apple.com/es/app/id6786309439" rel="noopener noreferrer">
+                        <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-app-store"></use></svg>
+                        App Store
+                    </a>
+                </span>
             </nav>
         </div>
     </header>
@@ -320,8 +337,6 @@
         <div class="site-footer__links">
             <a href="terminos-y-condiciones.html">Términos y condiciones</a>
             <a href="politica-de-privacidad.html" aria-current="page">Política de privacidad</a>
-            <a href="https://play.google.com/store/apps/details?id=com.gibay.app">Google Play</a>
-            <a href="https://apps.apple.com/es/app/id6786309439">App Store</a>
         </div>
         <p>© 2026 Gibay – Regala y gana premios. Desarrollador: Mario Velasco Casquero.</p>
     </footer>

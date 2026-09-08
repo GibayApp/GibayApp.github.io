@@ -6,10 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gibay — Da una segunda vida a tus objetos</title>
     <meta name="description" content="Gibay es la app para donar, intercambiar o dar una nueva oportunidad a objetos que ya no necesitas. Únete a la reutilización y reduce el desperdicio.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
     <link rel="stylesheet" href="css/home.css">
 </head>
 
 <body class="landing-body">
+    <svg xmlns="http://www.w3.org/2000/svg" style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true" focusable="false">
+        <symbol id="icon-google-play" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92Zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635Zm3.199-2.199 2.773 1.604a1 1 0 0 1 0 1.776l-2.773 1.604L15.206 12l2.492-1.492ZM5.864 2.658 16.802 8.99l-2.302 2.302-8.636-8.634Z"/>
+        </symbol>
+        <symbol id="icon-app-store" viewBox="0 0 24 24">
+            <path fill="currentColor" d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.847-.78.911-1.443 2.208-1.264 3.486 1.338.104 2.71-.688 3.551-1.503z"/>
+        </symbol>
+    </svg>
+
     <header class="landing-header">
         <div class="landing-header__inner">
             <a class="landing-header__logo" href="home.html" aria-label="Gibay — inicio">
@@ -19,8 +29,14 @@
                 <a href="#como-funciona">Cómo funciona</a>
                 <a href="politica-de-privacidad.html">Privacidad</a>
                 <a href="terminos-y-condiciones.html">Términos</a>
-                <a class="landing-btn" href="https://play.google.com/store/apps/details?id=com.gibay.app">Google Play</a>
-                <a class="landing-btn landing-btn--appstore" href="https://apps.apple.com/es/app/id6786309439">App Store</a>
+                <a class="landing-btn landing-btn--store" href="https://play.google.com/store/apps/details?id=com.gibay.app" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-google-play"></use></svg>
+                    Google Play
+                </a>
+                <a class="landing-btn landing-btn--store" href="https://apps.apple.com/es/app/id6786309439" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-app-store"></use></svg>
+                    App Store
+                </a>
             </nav>
         </div>
     </header>
@@ -35,23 +51,20 @@
                     aprovecharlas. Publica, dona, intercambia o vende entre particulares y reduce el desperdicio.
                 </p>
                 <div class="landing-hero__actions">
-                    <a class="landing-btn"
-                        href="https://play.google.com/store/apps/details?id=com.gibay.app">
-                        Descargar en Google Play
-                    </a>
-                    <a class="landing-btn landing-btn--appstore"
-                        href="https://apps.apple.com/es/app/id6786309439">
-                        Descargar en App Store
-                    </a>
                     <a class="landing-btn landing-btn--outline" href="#como-funciona">Ver cómo funciona</a>
                 </div>
                 <p class="landing-hero__note">Disponible en iOS y Android.</p>
             </div>
-            <div class="landing-hero__visual" aria-hidden="true">
-                <div class="landing-hero__card">
-                    <img src="https://gibayapp.github.io/images/logo.png" alt="">
-                    <p><strong>Gibay</strong></p>
-                    <p style="margin:0;font-size:0.9375rem;color:#555;">Menos basura, más utilidad</p>
+            <div class="landing-hero__visual">
+                <div class="landing-hero__video">
+                    <iframe
+                        width="260"
+                        height="387"
+                        src="embed-video.html"
+                        title="Vídeo corto de Gibay"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen></iframe>
                 </div>
             </div>
         </section>
@@ -103,13 +116,13 @@
             <h2 id="cta-title">Únete al movimiento Gibay</h2>
             <p>Descarga la app gratis y empieza a dar una nueva oportunidad a lo que ya no usas.</p>
             <div class="landing-cta__actions">
-                <a class="landing-btn"
-                    href="https://play.google.com/store/apps/details?id=com.gibay.app">
-                    Obtener Gibay en Google Play
+                <a class="landing-btn landing-btn--store" href="https://play.google.com/store/apps/details?id=com.gibay.app" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-google-play"></use></svg>
+                    Google Play
                 </a>
-                <a class="landing-btn landing-btn--appstore"
-                    href="https://apps.apple.com/es/app/id6786309439">
-                    Obtener Gibay en App Store
+                <a class="landing-btn landing-btn--store" href="https://apps.apple.com/es/app/id6786309439" rel="noopener noreferrer">
+                    <svg class="store-icon" aria-hidden="true" focusable="false"><use href="#icon-app-store"></use></svg>
+                    App Store
                 </a>
             </div>
         </section>
@@ -119,8 +132,6 @@
         <nav class="landing-footer__links" aria-label="Legal y contacto">
             <a href="politica-de-privacidad.html">Política de privacidad</a>
             <a href="terminos-y-condiciones.html">Términos y condiciones</a>
-            <a href="https://play.google.com/store/apps/datasafety?id=com.gibay.app">Seguridad de datos (Google Play)</a>
-            <a href="https://apps.apple.com/es/app/id6786309439">App Store</a>
         </nav>
         <p class="landing-footer__contact">Contacto: <a href="mailto:appgibay@gmail.com">appgibay@gmail.com</a></p>
         <p>© 2026 Gibay. Todos los derechos reservados.</p>

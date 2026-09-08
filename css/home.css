@@ -74,13 +74,31 @@
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9375rem;
-    border: none;
-    transition: background 0.2s ease;
+    border: 2px solid var(--gibay-purple);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 
 .landing-btn:hover {
     background: var(--gibay-purple-light);
+    border-color: var(--gibay-purple-light);
     color: #fff !important;
+}
+
+.landing-nav .landing-btn--store {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.8125rem;
+}
+
+.store-icon {
+    width: 1.125rem;
+    height: 1.125rem;
+    flex-shrink: 0;
+    fill: currentColor;
+}
+
+.landing-nav .store-icon {
+    width: 1rem;
+    height: 1rem;
 }
 
 .landing-btn--outline {
@@ -94,30 +112,11 @@
     color: var(--gibay-purple) !important;
 }
 
-.landing-btn--appstore {
-    background: #111;
-}
-
-.landing-btn--appstore:hover {
-    background: #333;
-    color: #fff !important;
-}
-
 .landing-cta__actions {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
-}
-
-.landing-cta .landing-btn--appstore {
-    background: #111;
-    color: #fff !important;
-}
-
-.landing-cta .landing-btn--appstore:hover {
-    background: #333;
-    color: #fff !important;
 }
 
 .landing-hero {
@@ -181,20 +180,22 @@
     justify-content: center;
 }
 
-.landing-hero__card {
-    background: linear-gradient(145deg, var(--gibay-purple-pale) 0%, #fff 60%);
-    border: 1px solid #ebe6f5;
+.landing-hero__video {
+    position: relative;
+    width: min(100%, 260px);
+    aspect-ratio: 1720 / 2560;
     border-radius: 20px;
-    padding: 2rem;
-    text-align: center;
-    max-width: 320px;
-    box-shadow: 0 12px 40px rgba(88, 53, 186, 0.12);
+    overflow: hidden;
+    background: #1a1a1a;
+    box-shadow: 0 12px 40px rgba(88, 53, 186, 0.18);
 }
 
-.landing-hero__card img {
-    max-width: 180px;
-    height: auto;
-    margin-bottom: 1rem;
+.landing-hero__video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .landing-section {
@@ -339,10 +340,12 @@
 .landing-cta .landing-btn {
     background: #fff;
     color: var(--gibay-purple) !important;
+    border-color: #fff;
 }
 
 .landing-cta .landing-btn:hover {
     background: var(--gibay-purple-pale);
+    border-color: var(--gibay-purple-pale);
 }
 
 .landing-footer {
